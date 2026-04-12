@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: var(--font-headline-next), sans-serif;
+  --font-body: var(--font-body-next), sans-serif;
+  --font-label: var(--font-label-next), sans-serif;
+
+  --color-primary: #001e40;
+  --color-primary-container: #003366;
+  --color-secondary: #0b6d3b;
+  --color-secondary-fixed: #9ef6b6;
+  --color-on-secondary-fixed: #00210e;
+  --color-surface: #f3faff;
+  --color-surface-container: #dbf1fe;
+  --color-surface-container-low: #e6f6ff;
+  --color-surface-container-high: #d5ecf8;
+  --color-surface-container-highest: #cfe6f2;
+  --color-on-surface: #071e27;
+  --color-on-surface-variant: #43474f;
+  --color-background: #f3faff;
+  --color-error: #ba1a1a;
+  --color-outline-variant: #c3c6d1;
+}
+
+@layer base {
+  body {
+    @apply font-body bg-background text-on-surface antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-md shadow-[0_12px_48px_rgba(7,30,39,0.06)];
+  }
+  
+  .mesh-gradient {
+    background: radial-gradient(at 0% 0%, rgba(219, 241, 254, 0.5) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, rgba(167, 200, 255, 0.3) 0, transparent 50%);
+  }
+}
