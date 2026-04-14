@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f9f9;
+  --on-background: #1a1c1c;
+  --surface: #f9f9f9;
+  --on-surface: #1a1c1c;
+  --surface-container: #eeeeee;
+  --surface-container-low: #f3f3f3;
+  --primary: #00254e;
+  --on-primary: #ffffff;
+  --primary-container: #003a75;
+  --on-primary-container: #7fa6e7;
+  --secondary: #735c00;
+  --on-secondary: #ffffff;
+  --secondary-container: #fccc00;
+  --on-secondary-container: #6d5700;
+  --tertiary: #252525;
+  --on-tertiary: #ffffff;
+  --on-surface-variant: #434750;
+  --outline-variant: #c3c6d1;
+  --error: #ba1a1a;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline-variant: var(--outline-variant);
+  --color-error: var(--error);
+
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Work Sans", sans-serif;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--on-background);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-headline);
+}
