@@ -21,9 +21,9 @@ const Navbar = () => {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <button className="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-label font-semibold hover:bg-primary transition-all active:scale-95 shadow-sm">
+          <a href="https://isia-portal.vercel.app/" target='_blank' className="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-label font-semibold hover:bg-primary transition-all active:scale-95 shadow-sm">
             Portal
-          </button>
+          </a>
         </div>
       </div>
     </header>
