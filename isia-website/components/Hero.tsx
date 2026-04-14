@@ -10,7 +10,7 @@ const Hero = () => {
           alt="Honiara Skyline"
           fill
           className="object-cover"
-          src="/hero-bg.jpg"
+          src="/hero1-bg.jpg"
           priority
         />
       </div>
