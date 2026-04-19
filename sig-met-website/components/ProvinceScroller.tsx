@@ -33,7 +33,7 @@ const ProvinceScroller = () => {
             <div className="bg-surface-container-low dark:bg-slate-800 rounded-3xl p-8 transition-all group-hover:bg-white dark:group-hover:bg-slate-700 group-hover:shadow-xl group-hover:-translate-y-1">
               <p className="text-xs font-extrabold uppercase tracking-widest text-outline dark:text-slate-500 mb-6">{province.name}</p>
               <span 
-                className="material-symbols-outlined text-primary dark:text-sky-400 text-5xl mb-4" 
+                className="material-symbols-outlined text-primary text-5xl mb-4" 
                 style={{ fontVariationSettings: province.filled ? "'FILL' 1" : "'FILL' 0" }}
               >
                 {province.icon}

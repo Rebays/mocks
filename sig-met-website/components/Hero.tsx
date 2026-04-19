@@ -3,13 +3,18 @@ import React from 'react';
 const Hero = () => {
   return (
     <main className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Image with Tonal Layering */}
+      {/* Background Video with Tonal Layering */}
       <div className="absolute inset-0 z-0 scale-105">
-        <img 
-          className="w-full h-full object-cover blur-[2px]" 
-          alt="cinematic aerial view of turquoise coral reefs and white sand coastline in Solomon Islands under soft hazy tropical sunlight" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuACej0sBepcLxGUILuNavaH7cGCd4omTRWFQUFSzUUKVKbcsUoZ2PC3ijmHV1Y1pgMwOWna3ySKgOFalJ3Vcch6sNT43myl75ZPqNYMo9Aafrj3EsZXB_9UQ3ZGaJsu9WiA3p0wzroWeAGrryiOvozUyNyjkoHmDQwNHBB4Fpb_rbuvRTj5UbP_S6sZ6WCG474L2k3UldpM7sRzU16Rlk3Qq0EQOS4RBrE6Y6ORbxjH3MHMLZVNObJMpaMsDSOUT339wrCTdq59loY" 
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover blur-[2px]"
+          poster="/bg-hero.jpg"
+        >
+          <source src="/bg-hero-vid.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 hero-gradient-overlay"></div>
       </div>
 
@@ -20,10 +25,10 @@ const Hero = () => {
           <div className="flex items-start">
             <span className="font-body text-[120px] md:text-[180px] font-extralight tracking-tighter leading-none">29°</span>
           </div>
-          
+
           {/* Vertical Divider */}
           <div className="h-32 md:h-48 w-[1px] bg-white/30 backdrop-blur-md"></div>
-          
+
           {/* Clean Metrics List */}
           <div className="flex flex-col items-start gap-4 text-left">
             <div className="group">
@@ -40,7 +45,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-8">
           <p className="font-headline text-lg md:text-xl font-medium tracking-wide text-white/90">Honiara, Solomon Islands</p>
           <p className="font-body text-sm text-white/60 mt-1">Light tropical breeze • Last updated 2m ago</p>
@@ -49,14 +54,14 @@ const Hero = () => {
 
       {/* Bottom Hero Actions */}
       <div className="absolute bottom-16 md:bottom-24 left-0 right-0 z-10 flex justify-center gap-4 md:gap-8 px-6">
-        <button className="px-8 py-3 rounded-xl font-headline font-semibold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 scale-95 active:scale-90">
-          Marine
+        <button className="px-8 py-3 rounded-2xl font-headline font-semibold text-white bg-primary/20 backdrop-blur-md border border-white/20 hover:bg-primary/40 transition-all duration-300 scale-95 active:scale-90 shadow-xl shadow-primary/10">
+          Marine Forecast
         </button>
-        <button className="px-8 py-3 rounded-xl font-headline font-semibold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 scale-95 active:scale-90">
-          Aviation
+        <button className="px-8 py-3 rounded-2xl font-headline font-semibold text-white bg-secondary/20 backdrop-blur-md border border-white/20 hover:bg-secondary/40 transition-all duration-300 scale-95 active:scale-90 shadow-xl shadow-secondary/10">
+          Aviation Weather
         </button>
-        <button className="px-8 py-3 rounded-xl font-headline font-semibold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 scale-95 active:scale-90">
-          Climate
+        <button className="px-8 py-3 rounded-2xl font-headline font-semibold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 scale-95 active:scale-90">
+          Climate Service
         </button>
       </div>
 

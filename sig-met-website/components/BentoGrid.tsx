@@ -11,7 +11,7 @@ const BentoGrid = () => {
               <h3 className="font-headline text-2xl font-bold text-on-surface dark:text-white">Precipitation Radar</h3>
               <p className="text-sm text-on-surface-variant dark:text-slate-400 font-medium">Updated 2 mins ago • Guadalcanal Region</p>
             </div>
-            <button className="bg-primary-container/10 text-primary dark:text-sky-400 px-4 py-2 rounded-full text-sm font-bold hover:bg-primary-container/20 transition-colors">Expand Map</button>
+            <button className="bg-primary-container/10 text-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-primary-container/20 transition-colors">Expand Map</button>
           </div>
           <div className="relative flex-grow bg-surface-container dark:bg-slate-800">
             <img 
