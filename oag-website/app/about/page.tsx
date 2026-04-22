@@ -59,7 +59,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="font-label-sm text-label-sm text-primary uppercase tracking-widest">
-                    Junior Muria
+                    David Dennis
                   </p>
                   <p className="font-body-md text-body-md text-on-surface-variant">
                     Auditor-General, Solomon Islands
