@@ -12,6 +12,8 @@ export default function Navbar() {
   const navItems = [
     { id: "audit-work", label: "Our Audit Work", href: "/reports" },
     { id: "reports", label: "Reports & Publications", href: "/reports" },
+    { id: "forum", label: "Public Forum", href: "/forum" },
+    { id: "engagement", label: "Engagement Hub", href: "/engagement" },
     { id: "integrity", label: "Integrity & Reporting", href: "#" },
     { id: "about", label: "About Us", href: "/about" },
   ];
