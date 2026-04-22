@@ -12,20 +12,20 @@ export default function Hero() {
         />
       </div>
       
-      <div className="flex-grow flex items-center justify-center w-full px-8 relative z-20">
+      <div className="flex-grow flex items-center justify-center w-full px-6 md:px-8 relative z-20 pt-16 md:pt-0">
         <div className="max-w-4xl text-center">
-          <h1 className="text-white font-headline-xl text-headline-xl mb-base">
+          <h1 className="text-white text-4xl md:text-headline-xl font-bold md:font-headline-xl mb-4 md:mb-base leading-tight">
             Independent Oversight for Public Resources
           </h1>
-          <p className="text-slate-200 text-body-lg mb-stack-md max-w-2xl mx-auto">
+          <p className="text-slate-200 text-base md:text-body-lg mb-8 md:mb-stack-md max-w-2xl mx-auto px-4 md:px-0">
             Ensuring transparency and accountability in the management of Solomon Islands' national wealth and government spending.
           </p>
-          <div className="relative max-w-xl mx-auto">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">
+          <div className="relative max-w-xl mx-auto w-full px-4 md:px-0">
+            <span className="absolute left-8 md:left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">
               search
             </span>
             <input
-              className="w-full pl-12 pr-4 py-4 border-none shadow-xl focus:ring-2 focus:ring-secondary text-primary bg-white rounded-xl"
+              className="w-full pl-14 md:pl-12 pr-4 py-3.5 md:py-4 border-none shadow-2xl focus:ring-2 focus:ring-secondary text-primary bg-white rounded-xl text-sm md:text-base"
               placeholder="Find an Audit Report..."
               type="text"
             />
