@@ -22,10 +22,20 @@ export default function Navbar() {
       onMouseLeave={() => setActiveMenu(null)}
     >
       <nav className="flex justify-between items-center px-8 h-16 w-full max-w-7xl mx-auto">
-        <div className="text-xl font-black tracking-tighter text-primary-container uppercase font-public-sans">
-          <span className="hidden md:inline">Auditors General</span>
-          <span className="md:hidden">AG</span>
-        </div>
+        <Link 
+          href="/" 
+          className="flex items-center gap-3 text-xl font-black tracking-tighter text-primary-container uppercase font-public-sans hover:opacity-90 transition-opacity"
+        >
+          <img 
+            src="/logo.png" 
+            alt="Solomon Islands Coat of Arms" 
+            className="h-10 w-auto"
+          />
+          <div className="flex flex-col leading-none">
+            <span className="hidden md:inline">Auditors General</span>
+            <span className="md:hidden text-lg">AG</span>
+          </div>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8 font-public-sans text-sm tracking-wide font-medium h-full">
