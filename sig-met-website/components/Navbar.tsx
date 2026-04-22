@@ -64,14 +64,14 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
       <GovBanner isVisible={!isScrolled} />
       <div className={`max-w-7xl mx-auto relative group pointer-events-auto px-4 transition-all duration-500 ${isScrolled ? 'pt-2' : 'pt-4'}`}>
-        <nav className={`flex justify-between items-center px-8 py-3 w-full transition-all duration-500 rounded-2xl border border-white/20 shadow-[0_12px_40px_-12px_rgba(34,83,139,0.15)] hover:shadow-[0_20px_50px_-12px_rgba(34,83,139,0.25)] ${
-          isScrolled 
-            ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-3xl' 
-            : 'bg-white/20 dark:bg-slate-900/80 backdrop-blur-2xl'
-        }`}>
+        <nav className={`flex justify-between items-center px-8 py-3 w-full transition-all duration-500 rounded-2xl border border-white/20 shadow-[0_12px_40px_-12px_rgba(34,83,139,0.15)] hover:shadow-[0_20px_50px_-12px_rgba(34,83,139,0.25)] ${isScrolled
+          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-3xl'
+          : 'bg-white/20 dark:bg-slate-900/80 backdrop-blur-2xl'
+          }`}>
           <div className="flex items-center gap-12">
-            <div className="flex items-center gap-3">
-              <img src="/met-logo.png" alt="SolomonMet Logo" className="h-12 w-auto" />
+            <div className="flex items-center gap-4">
+              <img src="/sig-logo.png" alt="SolomonMet Logo" className="h-12 w-auto" />
+              <p className={`text-xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>METEOROLOGY</p>
             </div>
 
             <div className="hidden lg:flex items-center gap-1">
@@ -81,13 +81,12 @@ const Navbar = () => {
                   className="relative px-4 py-2"
                   onMouseEnter={() => setActiveMenu(idx)}
                 >
-                  <button className={`font-headline font-semibold tracking-tight transition-colors duration-300 pointer-events-auto ${
-                    activeMenu === idx 
-                      ? 'text-primary' 
-                      : isScrolled 
-                        ? 'text-slate-800 dark:text-slate-200 hover:text-primary' 
-                        : 'text-white dark:text-slate-300 hover:text-slate-200'
-                  }`}>
+                  <button className={`font-headline font-semibold tracking-tight transition-colors duration-300 pointer-events-auto ${activeMenu === idx
+                    ? 'text-primary'
+                    : isScrolled
+                      ? 'text-slate-800 dark:text-slate-200 hover:text-primary'
+                      : 'text-white dark:text-slate-300 hover:text-slate-200'
+                    }`}>
                     {item.title}
                   </button>
                   {activeMenu === idx && (
