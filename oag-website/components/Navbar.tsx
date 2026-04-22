@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import MegaMenu from "./MegaMenu";
 import Link from "next/link";
+import MegaMenu from "./MegaMenu";
+import { MENU_DATA } from "@/constants/menuData";
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -52,9 +53,9 @@ export default function Navbar() {
           <button className="hidden md:block bg-secondary text-white px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-primary-container transition-all transform active:scale-95 rounded-xl">
             Report Misconduct
           </button>
-          
+
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden material-symbols-outlined text-primary-container text-2xl p-2 hover:bg-slate-100 rounded-full transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -65,24 +66,38 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl animate-in slide-in-from-top-4 duration-300 z-50">
-          <div className="flex flex-col p-6 space-y-4">
-            <Link 
-              href="/" 
-              className="text-primary font-bold text-lg border-b border-slate-100 pb-2"
+        <div className="md:hidden absolute top-full left-0 w-full h-[calc(100vh-64px)] bg-white border-b border-slate-200 shadow-xl overflow-y-auto animate-in slide-in-from-top-4 duration-300 z-50">
+          <div className="flex flex-col p-6 space-y-6">
+            <Link
+              href="/"
+              className="text-primary font-bold text-xl border-b border-slate-100 pb-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             {navItems.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                className="text-slate-600 font-medium text-lg border-b border-slate-100 pb-2 hover:text-secondary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
+              <div key={item.id} className="flex flex-col space-y-3">
+                <Link
+                  href={item.href}
+                  className="text-primary font-bold text-lg border-b border-slate-100 pb-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+                {/* Sub-items for mobile */}
+                <div className="flex flex-col space-y-2 pl-4">
+                  {MENU_DATA[item.id]?.items.map((subItem) => (
+                    <Link
+                      key={subItem.title}
+                      href={subItem.href}
+                      className="text-slate-500 font-medium text-sm hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {subItem.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
             <button className="w-full bg-secondary text-white py-4 rounded-xl font-bold uppercase tracking-widest text-sm shadow-lg mt-4">
               Report Misconduct
