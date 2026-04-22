@@ -10,12 +10,12 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: "audit-work", label: "Our Audit Work", href: "/reports" },
+    { id: "audit-work", label: "Audit Reports", href: "/reports" },
     { id: "reports", label: "Reports & Publications", href: "/reports" },
-    { id: "forum", label: "Public Forum", href: "/forum" },
-    { id: "engagement", label: "Engagement Hub", href: "/engagement" },
-    { id: "integrity", label: "Integrity & Reporting", href: "#" },
     { id: "about", label: "About Us", href: "/about" },
+    { id: "engagement", label: "Forum", href: "/engagement" },
+    // { id: "integrity", label: "Integrity & Reporting", href: "#" },
+
   ];
 
   return (
@@ -24,13 +24,13 @@ export default function Navbar() {
       onMouseLeave={() => setActiveMenu(null)}
     >
       <nav className="flex justify-between items-center px-8 h-16 w-full max-w-7xl mx-auto">
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className="flex items-center gap-3 text-xl font-black tracking-tighter text-primary-container uppercase font-public-sans hover:opacity-90 transition-opacity"
         >
-          <img 
-            src="/logo.png" 
-            alt="Solomon Islands Coat of Arms" 
+          <img
+            src="/logo.png"
+            alt="Solomon Islands Coat of Arms"
             className="h-10 w-auto"
           />
           <div className="flex flex-col leading-none">
@@ -41,19 +41,13 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8 font-public-sans text-sm tracking-wide font-medium h-full">
-          <Link
-            className="text-primary-container border-b-2 border-primary-container pb-1"
-            href="/"
-          >
-            Home
-          </Link>
+
           {navItems.map((item) => (
             <Link
               key={item.id}
               href={item.href}
-              className={`h-full flex items-center text-slate-600 hover:text-secondary transition-colors duration-300 ${
-                activeMenu === item.id ? "text-secondary border-b-2 border-secondary" : ""
-              }`}
+              className={`h-full flex items-center text-slate-600 hover:text-secondary transition-colors duration-300 ${activeMenu === item.id ? "text-secondary border-b-2 border-secondary" : ""
+                }`}
               onMouseEnter={() => setActiveMenu(item.id)}
             >
               {item.label}
